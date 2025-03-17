@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+
+/* Google Fonts - Instrument Serif */
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap');
 
 :root {
     --bgColor: #223344;
@@ -8,8 +10,6 @@
     --delay: .3s;
 }
 
-/* Google Fonts - Instrument Serif */
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap');
 
 body {
     margin: 0;
