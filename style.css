@@ -16,15 +16,12 @@ body {
     padding: 0;
     min-height: 100vh;
     font-family: var(--font); /* This will use Instrument Serif */
-    background: radial-gradient(ellipse at bottom, var(--bgColor) 0%, var(--bgColor2) 100%);
+    background: url('https://alexfitts.xyz/images/background.png') no-repeat center center;
+    background-size: cover;
     opacity: 0;
     animation: 1s ease-out var(--delay) 1 transitionAnimation;
     animation-fill-mode: forwards;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
 }
-
 #profilePicture, #profilePicture img {
     position: relative;
     width: 96px;
