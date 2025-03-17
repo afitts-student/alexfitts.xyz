@@ -65,22 +65,26 @@ body {
     margin-bottom: 10px;
     padding: 10px; /* 17px */
     text-decoration: none;
-    /* transition: all .25s cubic-bezier(.08, .59, .29, .99); */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
     -webkit-tap-highlight-color: transparent;
 }
 
+/* Hover effect */
 @media (hover: hover) {
     .link:hover {
-        background-color: var(--accentColor);
-        color: var(--bgColor);
+        background-color: var(--accentColor); /* Background color changes on hover */
+        color: var(--bgColor); /* Text color changes on hover */
+        box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.5); /* Add glowing effect */
+        transform: scale(1.05); /* Slightly enlarge the button */
     }
 }
 
+/* Active state for when the button is clicked */
 .link:active {
     background-color: var(--accentColor);
     color: var(--bgColor);
+    transform: scale(1); /* Return to normal size when clicked */
 }
-
 #hashtag {
     position: relative;
     padding-bottom: 20px;
