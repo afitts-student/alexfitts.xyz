@@ -66,23 +66,13 @@ body {
     margin: 10px;
     text-decoration: none;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 
 .link:hover {
-    background-color: white;
-    color: #FF3131;
-}
-
-/* Hover effect */
-@media (hover: hover) {
-    .link:hover {
-        background-color: var(--accentColor); /* Background color changes on hover */
-        color: var(--bgColor); /* Text color changes on hover */
-        box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.5); /* Add glowing effect */
-        transform: scale(1.05); /* Slightly enlarge the button */
-    }
-}
+    background-color: white !important;
+    color: #FF3131 !important;
+}}
 
 /* Active state for when the button is clicked */
 .link:active {
