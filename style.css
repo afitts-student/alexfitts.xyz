@@ -15,7 +15,7 @@ body {
     padding: 0;
     min-height: 100vh;
     font-family: var(--font);
-    text-shadow: 2px 2px 5px black;
+    /* text-shadow: 2px 2px 5px black; */
     background: url('https://alexfitts.xyz/images/background.png') no-repeat center center;
     background-size: cover;
     opacity: 0;
