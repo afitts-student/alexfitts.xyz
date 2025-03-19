@@ -4,22 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Alex Fitts | Links</title>
-    <!-- Favicon -->
     <link rel="icon" href="https://alexfitts.xyz/images/afxyzlogo.png" type="image/x-icon" />
-    <!-- Font Awesome icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <!-- Google Fonts - Instrument Serif -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&display=swap" rel="stylesheet">
-    <!-- Core theme CSS -->
     <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
-    <!-- Dark Mode Toggle -->
-    <div id="darkModeToggle">
-      <i id="themeIcon" class="fa-regular fa-moon"></i>
-    </div>
-
     <a id="profilePicture" href="#popup">
       <img src="https://alexfitts.xyz/images/afxyzlogo.png" alt="Profile Picture">
     </a>
@@ -38,9 +30,10 @@
       </div>
     </div>
 
-    <div id="userName">@alexfitts1</div>
+    <div id="userName">
+      @alexfitts1
+    </div>
     <center>High school junior, heavily involved in theater, technology, government, and politics</center>
-
     <div id="links">
       <a class="link" href="https://www.instagram.com/alexfitts1" target="_blank">
         <i class="fab fa-instagram">&nbsp;</i>Main Instagram
@@ -61,40 +54,32 @@
         <i class="fa-brands fa-tiktok"></i> TikTok
       </a>
       <a class="link" href="https://809097.xyz" target="_blank">
-        <i class="fa-regular fa-globe"></i> 809097.xyz
-      </a>
+        <i class="fa-regular fa-globe"></i> 809097.xyz</a>
       <a class="link" href="mailto:alex@alexfitts.xyz" target="_blank">
-        <i class="fa-regular fa-envelope"></i> Email Me (unavailable...)
-      </a>
+        <i class="fa-regular fa-envelope"></i> Email Me (unavailable...)</a>
     </div>
 
-    <div id="hashtag">alexfitts.xyz</div>
+    <div id="hashtag">
+      alexfitts.xyz
+    </div>
+
+    <!-- Dark Mode Toggle -->
+    <button id="darkModeToggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
 
     <script>
-      const themeToggle = document.getElementById("darkModeToggle");
-      const themeIcon = document.getElementById("themeIcon");
-
-      function setTheme(isDark) {
-        if (isDark) {
-          document.body.classList.add("dark-mode");
-          themeIcon.classList.remove("fa-moon");
-          themeIcon.classList.add("fa-sun");
-        } else {
-          document.body.classList.remove("dark-mode");
-          themeIcon.classList.remove("fa-sun");
-          themeIcon.classList.add("fa-moon");
-        }
+      // Check localStorage for the dark mode setting
+      if (localStorage.getItem('darkMode') === 'enabled') {
+        document.body.classList.add('dark-mode');
       }
 
-      themeToggle.addEventListener("click", () => {
-        const isDark = document.body.classList.toggle("dark-mode");
-        themeIcon.classList.add("rotate-icon"); // Add animation class
-        setTimeout(() => themeIcon.classList.remove("rotate-icon"), 300);
-        setTheme(isDark);
-      });
-
-      // Load theme based on system preference
-      setTheme(window.matchMedia("(prefers-color-scheme: dark)").matches);
+      function toggleDarkMode() {
+        document.body.classList.toggle('dark-mode');
+        if (document.body.classList.contains('dark-mode')) {
+          localStorage.setItem('darkMode', 'enabled');
+        } else {
+          localStorage.removeItem('darkMode');
+        }
+      }
     </script>
   </body>
 </html>
