@@ -42,7 +42,8 @@ body.dark-mode {
 #userName {
     color: var(--accentColor);
     font-size: 3rem;
-    font-weight: bold;
+    /*font-weight: bold;*/
+    font-style: italic;
     line-height: 1.25;
     display: block;
     font-family: var(--font);
